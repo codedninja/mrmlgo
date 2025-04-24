@@ -1,0 +1,21 @@
+[package]
+name = "mrml-capi"
+version = "0.1.0"
+edition = "2021"
+
+[features]
+# The `capi` feature is required by `cargo-c`.
+default = ["capi"]
+capi = []
+
+[lib]
+name = "mrml_capi"
+crate-type = ["staticlib"] # Specify that we want to build a C dynamic library
+
+[build-dependencies]
+cbindgen = "0.28.0"
+
+[dependencies]
+mrml = { version = "5.0.0" }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = { version = "1.0" }
