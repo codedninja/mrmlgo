@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"log"
 
-	mrmlgo "github.com/codedninja/mrml-go"
+	"github.com/codedninja/mrmlgo"
 )
 
 func main() {
